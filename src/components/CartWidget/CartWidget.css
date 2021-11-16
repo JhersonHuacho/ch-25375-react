@@ -1,0 +1,22 @@
+.cartWidget {
+  /* display: block; */
+  text-decoration: none;
+  /* list-style: none; */
+
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+div span {
+  color: #fff;
+}
+
+div a span {
+  background-color: #00A160;
+  padding: 3px 7px 3px 7px;
+  border-radius: 25%;
+  font-weight: bold;
+}

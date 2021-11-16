@@ -1,22 +1,13 @@
-import logo from './logo.svg';
+import { NavBar } from './components/NavBar/NavBar';
 import './App.css';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          E-Commerce San Pedro de Pilas.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App__header">
+        <NavBar />
+        <ItemListContainer greeting="Bienvenido" />
       </header>
     </div>
   );
