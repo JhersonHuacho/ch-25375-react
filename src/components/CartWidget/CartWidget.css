@@ -1,4 +1,4 @@
-.cartWidget {
+.cartWidget__link {
   /* display: block; */
   text-decoration: none;
   /* list-style: none; */
@@ -10,12 +10,13 @@
   align-items: center;
 }
 
-div span {
+.cartWidget__precio {
   color: #fff;
 }
 
-div a span {
+.cartWidget__total {
   background-color: #00A160;
+  color: #fff;
   padding: 3px 7px 3px 7px;
   border-radius: 25%;
   font-weight: bold;

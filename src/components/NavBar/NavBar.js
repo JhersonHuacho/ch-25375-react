@@ -15,7 +15,7 @@ export const NavBar = () => {
         <div className="menu-categoria">
           <a className="menu-categoria__link" href=".">Categorias</a>
         </div>
-        <ul className="menu"> 
+        <ul className="menu">
           <li className="menu__item">
             <a className="menu__link" href=".">Abarrotes</a>
           </li>
@@ -28,12 +28,12 @@ export const NavBar = () => {
           <li className="menu__item">
             <a className="menu__link" href=".">Lácteos</a>
           </li>
-          <li className="menu__item">
+          {/* <li className="menu__item">
             <a className="menu__link" href=".">Licores</a></li>
           <li className="menu__item">
             <a className="menu__link" href=".">Frutas</a></li>
           <li className="menu__item">
-            <a className="menu__link" href=".">Verduras</a></li>
+            <a className="menu__link" href=".">Verduras</a></li> */}
         </ul>
         <div className="login">
           <a className="login__link" href=".">Iniciar Sesión</a>

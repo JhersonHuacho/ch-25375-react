@@ -4,12 +4,12 @@ import './CartWidget.css';
 
 const CardWidget = () => {
   return (
-    <div>
-      <a href="." className="cartWidget">
+    <div className="cartWidget">
+      <a href="." className="cartWidget__link">
         <MdShoppingCart style={{ fontSize: "30px", color: "white" }} />
-        <span>4</span>
+        <span className="cartWidget__total">4</span>
       </a>
-      <span>$/. 0.00</span>
+      <span className="cartWidget__precio">$/. 0.00</span>
     </div>
   )
 }

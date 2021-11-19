@@ -7,8 +7,10 @@ function App() {
     <div className="App">
       <header className="App__header">
         <NavBar />
-        <ItemListContainer greeting="Bienvenido" />
       </header>
+      <main className="App_main">
+        <ItemListContainer greeting="Bienvenido" />
+      </main>
     </div>
   );
 }
