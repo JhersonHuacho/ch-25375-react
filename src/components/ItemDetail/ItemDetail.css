@@ -1,0 +1,49 @@
+.item-detail {
+    background-color: white;
+    margin: 0 10%;
+}
+.item-detail__container {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 50px 10px;
+}
+.item-detail__img {
+    margin-right: 10%;
+}
+.item-detail__img img {
+    width: 300px;
+}
+
+.item-detail__description {
+    margin-bottom: 10px;
+}
+
+.item-detail__price-rating {
+    padding: 20px 0;
+}
+.item-detail__price-rating > span {
+    color: #00a160;
+    font-weight: 700;
+}
+.rating-start {
+    display: flex;
+    align-items: center;
+}
+
+.rating-start .start {
+    color: #ffab00;
+    margin-right: 3px;
+}
+
+.rating-start > span {
+    margin-left: 5px;
+}
+
+.item-detail__count {
+    margin-top: 20px;
+}
+
+.item-detail__category {
+    margin-top: 10px;
+}

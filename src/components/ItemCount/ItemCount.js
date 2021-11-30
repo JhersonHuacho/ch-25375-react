@@ -22,7 +22,6 @@ const ItemCount = ({ stock, initial }) => {
       <div className="item">
         <div className="item__content">
           <div className="item__count">
-            <span>Camisa tiger</span>
             <div className="item__content-count">
               <button
                 className="item__button-minus"
