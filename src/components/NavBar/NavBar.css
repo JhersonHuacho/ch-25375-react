@@ -23,6 +23,9 @@
     display: flex;
     align-items: center;
   }
+  .navbar__content-logo a {
+    text-decoration: none;
+  }
   .navbar__logo {
     /* height: 40vmin; */
     height: 50px;

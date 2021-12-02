@@ -1,6 +1,7 @@
+import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/NavBar/NavBar';
 import './App.css';
-// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
@@ -11,7 +12,12 @@ function App() {
       </header>
       <main className="App_main">
         {/* <ItemListContainer greeting="Bienvenido" /> */}
-        <ItemDetailContainer id="1" />
+        {/* <ItemDetailContainer id="1" /> */}
+        <Routes>
+          <Route path="/" element={<ItemListContainer greeting="Bienvenido" />} />
+          <Route path="category/:categoryId" element={<ItemListContainer greeting="Bienvenido" />} />
+          <Route path="category/:categoryId/detailProduct/:productId" element={<ItemDetailContainer />} />
+        </Routes>
       </main>
     </div>
   );

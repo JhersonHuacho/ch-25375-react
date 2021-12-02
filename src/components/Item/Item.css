@@ -48,7 +48,11 @@
     border: 1px solid #00a160;
     border-radius: 10px;
     font-weight: 900;
-  }
+}
+
+.item__body button:hover {
+    cursor: pointer;
+} 
 
 .item__footer {
     height: 30px;

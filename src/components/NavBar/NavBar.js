@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 import logo from '../../logo.svg';
 import CardWidget from '../CartWidget/CartWidget';
@@ -9,24 +10,26 @@ export const NavBar = () => {
       <div className="navbar__content">
         <div className="navbar__content-logo">
           <img src={logo} className="navbar__logo" alt="logo" />
-          <span className="navbar__title">PilasMarket</span>
+          <Link to="/">
+            <span className="navbar__title">PilasMarket</span>
+          </Link>
         </div>
 
         <div className="menu-categoria">
-          <a className="menu-categoria__link" href=".">Categorias</a>
+          <Link className="menu-categoria__link" to="/">Categorias</Link>
         </div>
         <ul className="menu">
           <li className="menu__item">
-            <a className="menu__link" href=".">Abarrotes</a>
+            <Link className="menu__link" to="/category/1">jewelery</Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href=".">Conservar</a>
+            <Link className="menu__link" to="/category/2">electronics</Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href=".">Embutidos</a>
+            <Link className="menu__link" to="/category/3">women's clothing</Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href=".">Lácteos</a>
+            <Link className="menu__link" to="/category/4">men's clothing</Link>
           </li>
           {/* <li className="menu__item">
             <a className="menu__link" href=".">Licores</a></li>

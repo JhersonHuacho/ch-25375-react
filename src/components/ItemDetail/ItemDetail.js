@@ -12,10 +12,10 @@ const ItemDetail = ({ product }) => {
         </div>
         <div className="item-detail__main">
           <div className="item-detail__title">
-            <h4>{product.title}</h4>
+            <h4>{product.category}</h4>
           </div>
           <div className="item-detail__description">
-            <h2>{product.description}</h2>
+            <h2>{product.title}</h2>
           </div>
           <hr />
           <div className="item-detail__price-rating">
@@ -34,7 +34,7 @@ const ItemDetail = ({ product }) => {
             <ItemCount stock={10} initial={0} />
           </div>
           <div className="item-detail__category">
-            <strong>Categoría:</strong> {product.category}
+            {/* <strong>Categoría:</strong> {product.category} */}
             <p><strong>Stock:</strong> 10</p>
           </div>
         </div>
