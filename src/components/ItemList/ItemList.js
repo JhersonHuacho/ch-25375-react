@@ -48,7 +48,7 @@ const ItemList = ({ categoryId }) => {
               {
                 products.map(product => {
                   return (
-                    <Item product={product} />
+                    <Item key={product.id} product={product} />
                   )
                 })
               }

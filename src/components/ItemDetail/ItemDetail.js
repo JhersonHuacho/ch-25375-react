@@ -1,9 +1,27 @@
-import React from 'react';
-import { BsStar, BsStarFill } from 'react-icons/bs'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { BsStar, BsStarFill } from 'react-icons/bs';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 const ItemDetail = ({ product }) => {
+  const [cart, setCart] = useState([{
+    id: 1,
+    userId: 1,
+    products: []
+  }]);
+  const [isAddCart, setIsAddCart] = useState(false);
+  const navigate = useNavigate();
+
+  const onAdd = (quantity) => {
+    setCart([{ ...cart, products: cart[0].products.concat({ productId: 1, quantity: quantity }) }]);
+    setIsAddCart(true);
+  }
+
+  const handleClickFinishCart = () => {
+    navigate(`cart`);
+  }
+
   return (
     <div className="item-detail">
       <div className="item-detail__container">
@@ -30,13 +48,18 @@ const ItemDetail = ({ product }) => {
             <span>S/. {product.price}</span>
           </div>
           <hr />
-          <div className="item-detail__count">
-            <ItemCount stock={10} initial={0} />
-          </div>
+          {!isAddCart &&
+            <div className="item-detail__count">
+              <ItemCount stock={10} initial={0} onAdd={onAdd} />
+            </div>
+          }
           <div className="item-detail__category">
             {/* <strong>Categoría:</strong> {product.category} */}
             <p><strong>Stock:</strong> 10</p>
           </div>
+          <button className="item__button-finish-cart" onClick={handleClickFinishCart}>
+            Terminar comprar
+          </button>
         </div>
       </div>
     </div>

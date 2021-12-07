@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './ItemCount.css';
 import { HiOutlinePlusSm, HiOutlineMinus } from 'react-icons/hi';
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
   const [countCart, setCountCart] = useState(initial);
 
   const handleClickAdd = () => {
@@ -15,6 +15,10 @@ const ItemCount = ({ stock, initial }) => {
     if (countCart !== 0) {
       setCountCart(countCart - 1);
     }
+  }
+
+  const handleClickAddCart = () => {
+    onAdd(countCart);
   }
 
   return (
@@ -41,7 +45,7 @@ const ItemCount = ({ stock, initial }) => {
             </div>
           </div>
           <div className="item__content-button-add-cart">
-            <button className="item__button-add-cart">
+            <button className="item__button-add-cart" onClick={handleClickAddCart}>
               Agregar al carrito
             </button>
           </div>
