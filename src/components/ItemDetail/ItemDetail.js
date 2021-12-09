@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BsStar, BsStarFill } from 'react-icons/bs';
+import { CartContext } from '../../CartContext';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 const ItemDetail = ({ product }) => {
-  const [cart, setCart] = useState([{
-    id: 1,
-    userId: 1,
-    products: []
-  }]);
+  // const [cart, setCart] = useState([{
+  //   id: 1,
+  //   userId: 1,
+  //   products: []
+  // }]);
+  const { addItem } = useContext(CartContext);
   const [isAddCart, setIsAddCart] = useState(false);
   const navigate = useNavigate();
-
+  console.log('ItemDetail => product', product)
   const onAdd = (quantity) => {
-    setCart([{ ...cart, products: cart[0].products.concat({ productId: 1, quantity: quantity }) }]);
+    // setCart([{ ...cart, products: cart[0].products.concat({ productId: 1, quantity: quantity }) }]);
+    // setCart(cart.concat({
+    //   name: product.name,
+    //   price: product.price,
+    //   quantity: quantity
+    // }));
+    addItem(product, quantity);
     setIsAddCart(true);
   }
 
