@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CartContext } from './CartContext';
+import { CartContext } from './context';
 
 export const CartProvider = ({ defaultValue = [], children }) => {
 
@@ -11,7 +11,9 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     if (!isInCart(item.id)) {
       const objCart = {
         id: item.id,
-        name: item.name,
+        category: item.category,
+        description: item.description,
+        image: item.image,
         price: item.price,
         quantity: quantity
       }

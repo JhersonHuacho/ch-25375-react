@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../../CartContext';
+import { CartContext } from '../../context';
 import { MdShoppingCart } from 'react-icons/md';
 import './CartWidget.css';
 
@@ -8,7 +8,7 @@ const CardWidget = () => {
   console.log('CardWidget => cart', cart);
   const priceTotal = cart.length === 0
     ? 0
-    : cart.reduce((previousValue, currentValue, currentIndex) => {
+    : cart.reduce((previousValue, currentValue) => {
       return previousValue + currentValue.price
     }, 0);
 
