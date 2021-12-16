@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import { getProductModular } from '../../firebase';
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
@@ -8,11 +9,16 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
 
-    fetch(`https://fakestoreapi.com/products/${params.productId}`)
-      .then(response => response.json())
-      .then(json => {
-        return setProduct(json);
-      })
+    // fetch(`https://fakestoreapi.com/products/${params.productId}`)
+    //   .then(response => response.json())
+    //   .then(json => {
+    //     return setProduct(json);
+    //   })
+
+    getProductModular('3x22B7yfGXfgoai3yOKY').then(result => {
+      // console.log('ItemDetailContainer => getProductModular', result);
+      setProduct(result);
+    })
 
   }, [params.productId])
 

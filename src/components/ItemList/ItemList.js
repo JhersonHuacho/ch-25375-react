@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Item from '../Item/Item';
 import Spinner from '../Spinner/Spinner';
 import './ItemList.css';
-
+import { getProductsModular } from '../../firebase';
 const ItemList = ({ categoryId }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,8 +22,18 @@ const ItemList = ({ categoryId }) => {
   // console.log('categoryIdValue', categoryIdValue)
   useEffect(() => {
     setLoading(true);
-    fetch('https://fakestoreapi.com/products')
-      .then(response => response.json())
+    // fetch('https://fakestoreapi.com/products')
+    //   .then(response => response.json())
+    //   .then(products => {
+    //     const productsCatgegory = products.filter(product => {
+    //       return product.category === (categoryIdValue ? categoryIdValue : product.category)
+    //     })
+    //     // console.log('productsCatgegory', productsCatgegory);
+    //     setProducts(productsCatgegory);
+    //     setLoading(false);
+    //   })
+
+    getProductsModular()
       .then(products => {
         const productsCatgegory = products.filter(product => {
           return product.category === (categoryIdValue ? categoryIdValue : product.category)
@@ -32,6 +42,7 @@ const ItemList = ({ categoryId }) => {
         setProducts(productsCatgegory);
         setLoading(false);
       })
+
   }, [categoryIdValue])
 
   return (
