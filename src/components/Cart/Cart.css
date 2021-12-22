@@ -57,3 +57,32 @@
 .cart__button:hover {
     cursor: pointer;
 }
+
+.button-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button-content button {
+    padding: 10px 5px;
+    width: 200px;
+    background-color: #00a160;
+    color: #fff;
+    border: 1px solid #00a160;
+    border-radius: 10px;
+    font-weight: 900;
+}
+  
+.button-content button:hover {
+    cursor: pointer;
+}
+
+.mensaje-confirmacion {
+    width: 300px;
+}
+
+.mensaje-confirmacion span{
+    color: #00a160;
+    font-weight: 900;
+}

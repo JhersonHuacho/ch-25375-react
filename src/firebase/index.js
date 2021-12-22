@@ -69,6 +69,7 @@ export {
   getProductsModular,
   getProductModular,
   getProductsNamespaced,
-  getProductNamespaced
+  getProductNamespaced,
+  db
 }
 

@@ -15,9 +15,9 @@ const ItemDetailContainer = () => {
     //     return setProduct(json);
     //   })
 
-    getProductModular('3x22B7yfGXfgoai3yOKY').then(result => {
-      // console.log('ItemDetailContainer => getProductModular', result);
-      setProduct(result);
+    getProductModular(params.productId).then(result => {
+      console.log('ItemDetailContainer => getProductModular', result);
+      setProduct({ ...result, id: params.productId });
     })
 
   }, [params.productId])
